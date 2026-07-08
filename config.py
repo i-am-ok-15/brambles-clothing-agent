@@ -1,0 +1,3 @@
+# Weather Config
+FORECAST_LAT = "51.180406"
+FORECAST_LONG = "-1.702326"
