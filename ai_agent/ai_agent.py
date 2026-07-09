@@ -20,12 +20,6 @@ def client_setup():
 def get_completion(client, messages, model):
     return client.chat.completions.create(model=model, messages=messages)
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="AI Agent")
-    parser.add_argument("default_prompt", type=str, help="Default prompt")
-    args = parser.parse_args()
-    return args
-
 def build_user_prompt(clothing, forecast_tomorrow):
     user_prompt = f"""
 Convert the list of recommended clothing ({clothing}) into markdown text that can be parsed into HTML using an static site generator. Also add some insights on the weather readout from OpenWeather ({forecast_tomorrow})"""
