@@ -1,0 +1,5 @@
+PUBLIC_DIR = "./public/"
+STATIC_DIR = "./ssg/static/"
+CONTENT = "./ssg//src/content/"
+TEMPLATE = "./ssg/src/template.html"
+DEST_DIR = "./docs"
