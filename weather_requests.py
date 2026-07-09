@@ -3,10 +3,11 @@ import requests
 import json
 from dotenv import load_dotenv
 from datetime import date, timedelta
-from config import FORECAST_LAT, FORECAST_LONG
 
 load_dotenv()
 API_KEY = os.environ.get("OPENWEATHER_API_KEY")
+FORECAST_LAT = os.environ.get("FORECAST_LAT")
+FORECAST_LONG = os.environ.get("FORECAST_LONG")
 
 # get weather forecast object from OpenWeather. Using 5 day, 3 hour increment forecast.
 def get_forecast():
