@@ -4,7 +4,6 @@ from openai import OpenAI
 from ai_agent.prompts import SYSTEM_PROMPT
 from ai_agent.config import MODEL, BASE_URL
 
-
 def client_setup():
     load_dotenv()
     api_key = os.environ.get("OPENROUTER_API_KEY")
