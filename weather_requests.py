@@ -30,5 +30,3 @@ def get_tomorrow_forecast(forecast_list):
             if hh >= 9 and hh <= 18:
                 forecast_tomorrow.append(increment)
     return forecast_tomorrow
-
-

@@ -1,0 +1,66 @@
+{"body area" : 
+    {
+        "head":
+            {
+                "-5": "Warm Hat",
+                "5": "Warm Hat",
+                "10": "",
+                "20": "Sun Hat",
+                "25": "Sun Hat"
+            }
+    , 
+        "body": 
+            {
+                "-5": "Base Layer, T-Shirt, Jumper, Warm Jacket",
+                "5": "Base Layer, T-Shirt, Jumper, Waterproof Jacket",
+                "10": "T-Shirt, Jumper, Waterproof Jacket",
+                "20": "T-Shirt, Jumper",
+                "25": "T-Shirt"
+            }
+    , 
+        "legs": 
+            {
+                "-5": "Base Layer, Joggers, Waders",
+                "5": "Base Layer, Joggers, Waders",
+                "10": "Joggers, Waders",
+                "20": "Joggers",
+                "25": "Joggers"
+            }
+    , 
+        "feet": 
+            {
+                "-5": "Socks, Shoes",
+                "5": "Socks, Shoes",
+                "10": "Socks, Shoes",
+                "20": "Socks, Shoes",
+                "25": "Socks, Shoes"
+            }
+    , 
+        "hands": 
+            {
+                "-5": "Gloves",
+                "5": "Gloves",
+                "10": "",
+                "20": "",
+                "25": ""
+            }
+    , 
+        "other":
+        {
+                "-5": "",
+                "5": "",
+                "10": "",
+                "20": "Sun Cream",
+                "25": "Sun Cream"
+        }
+    , 
+        "bag": 
+        {
+                "-5": "T-Shirt, Jumper, Joggers, Socks",  
+                "5": "T-Shirt, Jumper, Joggers, Socks",
+                "10": "T-Shirt, Jumper, Joggers, Socks",
+                "20": "T-Shirt, Joggers, Socks",
+                "25": "T-Shirt, Joggers, Socks"
+        }
+    }
+}
