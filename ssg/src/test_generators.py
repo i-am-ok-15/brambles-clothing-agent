@@ -2,8 +2,8 @@ import unittest
 
 from generators import extract_title
 
-class TestGenerators(unittest.TestCase):
 
+class TestGenerators(unittest.TestCase):
     def test_extract_title_expected(self):
 
         markdown = "# Hello World"

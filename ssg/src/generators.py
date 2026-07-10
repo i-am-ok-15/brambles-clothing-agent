@@ -1,6 +1,7 @@
 import os
-from config import CONTENT, TEMPLATE
+
 from converters import markdown_to_html_node
+
 
 def extract_title(markdown):
     markdown_elements = markdown.split("\n")
@@ -9,8 +10,9 @@ def extract_title(markdown):
         if element.startswith("# "):
             return element.strip("# ")
 
+
 def generate_page(from_path, template_path, dest_path, basepath):
-    
+
     print(f"Generating page from {from_path} to {dest_path} using {template_path}.")
 
     markdown = open(from_path, "r").read()
@@ -29,7 +31,10 @@ def generate_page(from_path, template_path, dest_path, basepath):
     with open(dest_path, "w") as generated_page:
         generated_page.write(new_template)
 
-def generate_pages_recursively(dir_path_content, template_path, dest_dir_path, basepath):
+
+def generate_pages_recursively(
+    dir_path_content, template_path, dest_dir_path, basepath
+):
 
     elements = os.listdir(dir_path_content)
 
@@ -38,7 +43,9 @@ def generate_pages_recursively(dir_path_content, template_path, dest_dir_path, b
         if os.path.isdir(entry_path):
             destination_path = os.path.join(dest_dir_path, entry)
             os.mkdir(destination_path)
-            generate_pages_recursively(entry_path, template_path, destination_path, basepath)
+            generate_pages_recursively(
+                entry_path, template_path, destination_path, basepath
+            )
         else:
             if entry.endswith(".md"):
                 html_entry = entry.rstrip(".md")

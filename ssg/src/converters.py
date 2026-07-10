@@ -1,7 +1,9 @@
 import re
-from textnode import TextNode, TextType
+
 from blocknode import BlockType
-from htmlnode import HTMLNode, ParentNode, LeafNode
+from htmlnode import LeafNode, ParentNode
+from textnode import TextNode, TextType
+
 
 def text_node_to_html_node(text_node):
 
@@ -17,10 +19,15 @@ def text_node_to_html_node(text_node):
     if text_node.text_type == TextType.CODE:
         return LeafNode(tag="code", value=text_node.text)
     if text_node.text_type == TextType.LINK:
-        return LeafNode(tag="a", value=text_node.text, props={"href":text_node.url})
+        return LeafNode(tag="a", value=text_node.text, props={"href": text_node.url})
     if text_node.text_type == TextType.IMAGE:
-        return LeafNode(tag="img", value=text_node.text, props={"src": text_node.url, "alt": text_node.alt})
+        return LeafNode(
+            tag="img",
+            value=text_node.text,
+            props={"src": text_node.url, "alt": text_node.alt},
+        )
     raise ValueError(f"Unhandled TextType: {text_node.text_type}")
+
 
 def text_to_textnodes(text):
 
@@ -34,16 +41,16 @@ def text_to_textnodes(text):
 
     return new_nodes
 
+
 def split_nodes_delimiter(old_nodes, delimiter, text_type):
 
     new_nodes = []
 
     for node in old_nodes:
-
         if node.text_type != TextType.TEXT:
             new_nodes.append(node)
             continue
-        
+
         parts = node.text.split(delimiter)
 
         if len(parts) % 2 == 0:
@@ -58,25 +65,27 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
             else:
                 odd_node = TextNode(part, text_type)
                 new_nodes.append(odd_node)
- 
+
     return new_nodes
+
 
 def extract_markdown_images(text):
 
     matches = re.findall(r"!\[([^\[\]]*)\]\(([^\(\)]*)\)", text)
     return matches
 
+
 def extract_markdown_links(text):
 
     matches = re.findall(r"(?<!!)\[([^\[\]]*)\]\(([^\(\)]*)\)", text)
     return matches
+
 
 def split_nodes_image(old_nodes):
 
     new_nodes = []
 
     for node in old_nodes:
-
         if node.text_type != TextType.TEXT:
             new_nodes.append(node)
             continue
@@ -96,15 +105,15 @@ def split_nodes_image(old_nodes):
             new_nodes.append(TextNode(alt, TextType.IMAGE, link))
         if text:
             new_nodes.append(TextNode(text, TextType.TEXT))
-        
+
     return new_nodes
+
 
 def split_nodes_link(old_nodes):
 
     new_nodes = []
 
     for node in old_nodes:
-
         if node.text_type != TextType.TEXT:
             new_nodes.append(node)
             continue
@@ -124,8 +133,9 @@ def split_nodes_link(old_nodes):
             new_nodes.append(TextNode(alt, TextType.LINK, link))
         if text:
             new_nodes.append(TextNode(text, TextType.TEXT))
-        
+
     return new_nodes
+
 
 def markdown_to_blocks(markdown):
 
@@ -136,7 +146,7 @@ def markdown_to_blocks(markdown):
     for block in blocks:
         stripped_block = block.strip()
         stripped_blocks.append(stripped_block)
-    
+
     clean_blocks = []
 
     for block in stripped_blocks:
@@ -147,13 +157,23 @@ def markdown_to_blocks(markdown):
 
     return clean_blocks
 
+
 def block_to_block_type(markdown):
 
     if markdown.startswith("#"):
         hash_count = 0
-        while hash_count < len(markdown) and markdown[hash_count] == "#" and hash_count < 6:
+        while (
+            hash_count < len(markdown)
+            and markdown[hash_count] == "#"
+            and hash_count < 6
+        ):
             hash_count += 1
-        if 1 <= hash_count <= 6 and hash_count < len(markdown) and markdown[hash_count] == " " and hash_count + 1 < len(markdown):
+        if (
+            1 <= hash_count <= 6
+            and hash_count < len(markdown)
+            and markdown[hash_count] == " "
+            and hash_count + 1 < len(markdown)
+        ):
             return BlockType.HEADING
 
     list_check = markdown.split("\n")
@@ -161,7 +181,7 @@ def block_to_block_type(markdown):
     if list_check[0] == "```":
         if len(list_check) >= 2 and list_check[0] == "```" and list_check[-1] == "```":
             return BlockType.CODE
-    
+
     if list_check[0].startswith(">"):
         is_quote = True
         for line in list_check:
@@ -179,7 +199,7 @@ def block_to_block_type(markdown):
                 break
         if is_unordered_list:
             return BlockType.UNORDERED_LIST
-    
+
     if list_check[0].startswith("1. "):
         is_ordered_list = True
         for i in range(len(list_check)):
@@ -192,8 +212,9 @@ def block_to_block_type(markdown):
 
     return BlockType.PARAGRAPH
 
+
 def markdown_to_html_node(markdown):
-    
+
     html_children = []
 
     blocks = markdown_to_blocks(markdown)
@@ -218,11 +239,12 @@ def markdown_to_html_node(markdown):
 
         else:
             node = paragraph_to_htmlnode(block)
-        
+
         if node is not None:
-            html_children.append(node)        
+            html_children.append(node)
 
     return ParentNode(tag="div", children=html_children)
+
 
 def heading_to_htmlnode(block):
 
@@ -233,21 +255,22 @@ def heading_to_htmlnode(block):
             heading_level += 1
         else:
             break
-    
+
     if not 1 <= heading_level <= 6:
         return None
-    
-    if block[heading_level:heading_level + 1] != " ":
+
+    if block[heading_level : heading_level + 1] != " ":
         return None
-    
-    heading_text = block[heading_level + 1:].strip()
+
+    heading_text = block[heading_level + 1 :].strip()
     heading_tag = f"h{heading_level}"
     children = text_to_children(heading_text)
-    
+
     return ParentNode(tag=heading_tag, children=children)
-    
+
+
 def code_to_htmlnode(block):
-    
+
     lines = block.split("\n")
 
     fence_start = None
@@ -258,7 +281,7 @@ def code_to_htmlnode(block):
             fence_start = i
         elif line.startswith("```") and fence_start is not None:
             fence_end = i
-    
+
     if fence_start is not None and fence_end is not None:
         if fence_end > fence_start:
             code_inner = lines[fence_start + 1 : fence_end]
@@ -268,8 +291,9 @@ def code_to_htmlnode(block):
             code_nested_node = ParentNode("pre", children=code_html_node)
 
             return code_nested_node
-    
+
     return None
+
 
 def quote_to_htmlnode(block):
 
@@ -280,7 +304,7 @@ def quote_to_htmlnode(block):
     for line in lines:
         if line.startswith("> "):
             quote_text.append(line[2:])
-            line = line.rstrip()        
+            line = line.rstrip()
         elif line.startswith(">") and len(line) == 1:
             line = line.rstrip()
             quote_text.append(line[2:])
@@ -297,8 +321,9 @@ def quote_to_htmlnode(block):
     else:
         return None
 
+
 def unordered_list_to_htmlnode(block):
-    
+
     lines = block.split("\n")
 
     items_text = []
@@ -308,7 +333,7 @@ def unordered_list_to_htmlnode(block):
             continue
         line = line.rstrip()
         items_text.append(line[2:])
-    
+
     if items_text:
         list_nodes = []
         for item in items_text:
@@ -325,9 +350,10 @@ def unordered_list_to_htmlnode(block):
             return wrapped_list_html
 
         return None
-    
+
     else:
         return None
+
 
 def ordered_list_to_htmlnode(block):
 
@@ -360,12 +386,13 @@ def ordered_list_to_htmlnode(block):
             return wrapped_list_html
 
         return None
-    
+
     else:
         return None
 
+
 def paragraph_to_htmlnode(block):
-    
+
     lines = block.split("\n")
     clean_lines = []
 
@@ -378,15 +405,16 @@ def paragraph_to_htmlnode(block):
     clean_text = " ".join(clean_lines)
     if not clean_text:
         return None
-    
-    children =  text_to_children(clean_text)
+
+    children = text_to_children(clean_text)
     if not children:
         return None
 
     return ParentNode("p", children=children)
 
+
 def text_to_children(clean_text):
-    
+
     text_nodes = text_to_textnodes(clean_text)
     html_nodes = []
 

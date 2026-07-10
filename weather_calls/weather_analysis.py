@@ -1,10 +1,9 @@
-
-
-def calculate_mean_temp(forecast_tomorrow: list) -> int:
+def calculate_mean_temp(forecast_tomorrow: list) -> float:
     total_temp = 0
     for increment in forecast_tomorrow:
         total_temp += increment["main"]["feels_like"]
     return round(total_temp / len(forecast_tomorrow), 1)
+
 
 def calculate_is_rainy(forecast_tomorrow: list) -> bool:
     is_rainy = False
@@ -17,5 +16,3 @@ def calculate_is_rainy(forecast_tomorrow: list) -> bool:
             if weather["main"] == "Thunderstorm":
                 is_rainy = True
     return is_rainy
-
-

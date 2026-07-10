@@ -1,8 +1,9 @@
 import os
 import shutil
 
+
 def clean_destination_files(path):
-    
+
     if os.path.exists(path):
         shutil.rmtree(path)
 
