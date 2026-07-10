@@ -1,31 +1,35 @@
 # Brambles Clothing Agent
 
-**Recommended Clothing for 2026-07-10**
+# Clothing Recommendations
 
-**Head:** Sun Hat  
-**Body:** T-Shirt  
-**Legs:** Joggers  
-**Feet:** Socks, Shoes  
-**Hands:** *None specified*  
-**Other:** Sun Cream  
+## Head
+- **Sun Hat**: To protect from direct sunlight and UV exposure.
 
-**Bag (Spare Items):**
-- 2× T-Shirt
-- 2× Joggers
-- 2× Socks
+## Body
+- **T-Shirt**: Lightweight and breathable for high temperatures.
+
+## Legs
+- **Joggers**: Comfortable for movement in warm weather.
+
+## Feet
+- **Socks, Shoes**: Appropriate footwear to stay cool and protected on warm surfaces.
+
+## Other
+- **Sun Cream**: Essential for protecting skin from strong UV rays.
+
+## Bag
+- **2x T-Shirt, 2x Joggers, 2x Socks**: Pack extras for changing clothes throughout the day.
 
 ---
 
-**Weather Insights & Safety Advice**
+# Weather Insights  
+Based on the OpenWeather data for tomorrow (July 11, 2026):  
+- **Temperature**: Highs between 26°C and 30.5°C, with intense sunlight (clear sky all day).  
+- **Wind**: Moderate to high wind speeds (up to 7 m/s), which may aid in cooling but could feel breezy.  
+- **Safety Considerations**:  
+  1. **Sun Protection**: Prioritize UV protection (hat, sunscreen, clothing) due to prolonged sun exposure.  
+  2. **Hydration**: Encourage frequent water intake to prevent dehydration in high heat.  
+  3. **Footwear Safety**: Secure shoes to avoid slipping on hot surfaces.  
+  4. **Wind Awareness**: Avoid loose clothing/hats that could be displaced by gusts (up to 8.19 m/s).  
 
-- **Temperatures:** Highs reach **34 °C** (feels like 32 °C) at 15:00; morning 28 °C, midday 31 °C, evening 31 °C.
-- **Conditions:** Broken to few clouds, low humidity (23–32 %), moderate easterly winds (3–5 m/s). No precipitation expected.
-- **UV Risk:** **High** – clear skies and high solar angle demand rigorous sun protection.
-- **Heat Risk:** **Significant** for young children; heat exhaustion and dehydration are primary concerns.
-
-**Key Recommendations**
-1. **Sun Protection:** Apply broad‑spectrum SPF 30+ sunscreen before arrival; reapply every 2 hours. Ensure sun hats are worn at all times outdoors.
-2. **Hydration:** Mandate water breaks every 20–30 minutes; provide cool water stations.
-3. **Activity Scheduling:** Plan vigorous play for the cooler morning (09:00–11:00). During peak heat (12:00–15:00) enforce shaded rest periods and low‑intensity activities.
-4. **Clothing Management:** Use spare items in the bag to change sweat‑soaked clothing promptly.
-5. **Monitoring:** Watch for signs of heat stress – dizziness, nausea, excessive sweating, pale/clammy skin. Act immediately with cooling and medical assessment if needed.
+Recommend avoiding outdoor activities between 12:00 PM and 15:00 when temperatures peak.
