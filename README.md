@@ -3,7 +3,6 @@ Here's a README you can use:
 
 ---
 
-```markdown
 # Brambles Clothing Agent
 
 An automated decision-support system that generates weather-appropriate clothing
@@ -95,7 +94,7 @@ python main.py
 | `openai`         | >=2.45.0  |
 | `python-dotenv`  | 1.1.0     |
 | `requests`       | >=2.34.2  |
-```
+
 
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/i-am-ok-15/brambles-clothing-agent)
