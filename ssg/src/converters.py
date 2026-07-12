@@ -1,8 +1,8 @@
 import re
 
-from blocknode import BlockType
-from htmlnode import LeafNode, ParentNode
-from textnode import TextNode, TextType
+from ssg.src.blocknode import BlockType
+from ssg.src.htmlnode import LeafNode, ParentNode
+from ssg.src.textnode import TextNode, TextType
 
 
 def text_node_to_html_node(text_node):

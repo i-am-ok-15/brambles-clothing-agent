@@ -1,35 +1,51 @@
-# Brambles Clothing Agent
+# Recommended Clothing for Tomorrow
 
-# Clothing Recommendations
+## Weather Overview
+The forecast for tomorrow indicates **clear skies** throughout the day with daytime temperatures ranging from **19.84°C to 28.97°C**. Winds will be moderate at **6-9 km/h** with gusts up to **11 km/h**. Humidity levels will be low (**24-52%**), making the air feel comfortable despite rising temperatures.
 
-## Head
-- **Sun Hat**: To protect from direct sunlight and UV exposure.
+## Daily Temperature Progression
+1. **Morning (9:00 AM)**: 19.84°C - Cool start with clear skies
+2. **Midday (12:00 PM)**: 26.33°C - Warming up, still clear
+3. **Afternoon (3:00 PM)**: 28.97°C - Peak temperature with broken clouds
+4. **Evening (6:00 PM)**: 25.84°C - Cooling down with continued cloud cover
 
-## Body
-- **T-Shirt**: Lightweight and breathable for high temperatures.
-
-## Legs
-- **Joggers**: Comfortable for movement in warm weather.
-
-## Feet
-- **Socks, Shoes**: Appropriate footwear to stay cool and protected on warm surfaces.
-
-## Other
-- **Sun Cream**: Essential for protecting skin from strong UV rays.
-
-## Bag
-- **2x T-Shirt, 2x Joggers, 2x Socks**: Pack extras for changing clothes throughout the day.
+## Safety Considerations for Children
+- **Layering is essential**: Temperatures will vary significantly from morning to afternoon
+- **Sun protection critical**: Clear skies and low humidity increase UV exposure
+- **Wind safety**: Moderate breezes may cause lightweight clothing to move; secure loose items
 
 ---
 
-# Weather Insights  
-Based on the OpenWeather data for tomorrow (July 11, 2026):  
-- **Temperature**: Highs between 26°C and 30.5°C, with intense sunlight (clear sky all day).  
-- **Wind**: Moderate to high wind speeds (up to 7 m/s), which may aid in cooling but could feel breezy.  
-- **Safety Considerations**:  
-  1. **Sun Protection**: Prioritize UV protection (hat, sunscreen, clothing) due to prolonged sun exposure.  
-  2. **Hydration**: Encourage frequent water intake to prevent dehydration in high heat.  
-  3. **Footwear Safety**: Secure shoes to avoid slipping on hot surfaces.  
-  4. **Wind Awareness**: Avoid loose clothing/hats that could be displaced by gusts (up to 8.19 m/s).  
+## Clothing Recommendations
 
-Recommend avoiding outdoor activities between 12:00 PM and 15:00 when temperatures peak.
+### Head
+- **Sun Hat** - Essential for UV protection during peak afternoon hours
+
+### Body
+- **T-Shirt** - Primary layer for comfort in warming temperatures
+- **Sweatshirt** - Light layer for cool morning (can be removed as temperature rises)
+
+### Legs
+- **Joggers** - Comfortable and practical for active play
+
+### Feet
+- **Socks, Shoes** - Closed shoes recommended for safety; socks for comfort
+
+### Hands
+- *No specific items required*
+
+### Other
+- **Sun Cream** - Must apply liberally 15 minutes before sun exposure and reapply every 2 hours
+
+### Bag Contents
+- **T-Shirt** - For changing if sweaty
+- **Joggers** - Backup bottom layer
+- **Socks** - Change if feet get wet or sweaty
+
+---
+
+## Key Recommendations Summary
+- **Prioritize sun safety** with hat and sunscreen throughout the day
+- **Dress in layers** to adapt from cool morning (20°C) to warm afternoon (29°C)
+- **Remove the sweatshirt** by midday when temperatures reach 26-29°C
+- **Reapply sunscreen** before afternoon outings when UV index peaks

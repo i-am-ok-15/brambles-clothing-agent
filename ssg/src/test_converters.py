@@ -1,7 +1,7 @@
 import unittest
 
-from blocknode import BlockType
-from converters import (
+from ssg.src.blocknode import BlockType
+from ssg.src.converters import (
     block_to_block_type,
     code_to_htmlnode,
     extract_markdown_images,
@@ -18,7 +18,7 @@ from converters import (
     text_to_textnodes,
     unordered_list_to_htmlnode,
 )
-from textnode import TextNode, TextType
+from ssg.src.textnode import TextNode, TextType
 
 
 class TestConverters(unittest.TestCase):
