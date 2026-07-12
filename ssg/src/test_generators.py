@@ -1,6 +1,6 @@
 import unittest
 
-from generators import extract_title
+from ssg.src.generators import extract_title
 
 
 class TestGenerators(unittest.TestCase):
